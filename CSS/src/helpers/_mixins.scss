@@ -1,0 +1,43 @@
+@mixin list-rest {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+@mixin circle($dimensions) {
+    width: $dimensions;
+    height: $dimensions;
+    border-radius: 50%;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin overlay($color, $opacity) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color, $opacity);
+}
+
+@mixin grid-media($min, $max, $gap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min, $max));
+    gap: $gap;
+}
+
+@mixin padding-section() {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}

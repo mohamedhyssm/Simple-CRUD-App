@@ -1,0 +1,94 @@
+@import "variables/colors";
+@import "helpers/mixins";
+@import "layout/global-rules";
+
+// header
+.crud {
+  width: 80%;
+  margin: auto;
+
+  header {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+
+    p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+}
+
+// inputs 
+.crud .price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  input {
+    width: 20%;
+  }
+
+  .total {
+    background-color: #36438f;
+    border-radius: 4px;
+    padding: 5px;
+
+    &::before {
+      content: "Total: ";
+    }
+  }
+}
+
+// outputes
+.crud .outputes {
+  .searchBlock {
+    .btnSearch {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        width: 45%;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px 0;
+
+    th {
+      text-transform: uppercase;
+    }
+
+    th,
+    td {
+      padding: 10px;
+    }
+  }
+
+  #deleteAll {
+    width: 100%;
+    padding: 15px 0;
+    display: none;
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(15px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(-15px);
+  }
+}

@@ -1,0 +1,147 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #222;
+  color: #fff;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  padding: 4px;
+  background-color: #111;
+  color: white;
+}
+input:focus {
+  background-color: black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+button {
+  width: 100%;
+  height: 30px;
+  background-color: #450aad;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #330aad;
+  letter-spacing: 1.3px;
+}
+
+.crud {
+  width: 80%;
+  margin: auto;
+}
+.crud header {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.crud header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.crud .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.crud .price input {
+  width: 20%;
+}
+.crud .price .total {
+  background-color: #36438f;
+  border-radius: 4px;
+  padding: 5px;
+}
+.crud .price .total::before {
+  content: "Total: ";
+}
+
+.crud .outputes .searchBlock .btnSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.crud .outputes .searchBlock .btnSearch button {
+  width: 45%;
+}
+.crud .outputes table {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px 0;
+}
+.crud .outputes table th {
+  text-transform: uppercase;
+}
+.crud .outputes table th,
+.crud .outputes table td {
+  padding: 10px;
+}
+.crud .outputes #deleteAll {
+  width: 100%;
+  padding: 15px 0;
+  display: none;
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  40%,
+  80% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  40%,
+  80% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

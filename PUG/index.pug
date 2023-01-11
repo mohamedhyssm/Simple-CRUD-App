@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="description", content="Crud App")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Crud App
+    include includes/style.pug
+  body 
+    div(class="crud")
+      //- header title and text
+      header 
+        h1 Crud 
+        p Product Managment System
+      //- inputes
+      div(class="inputes")
+        input(type="text", id="title", placeholder="title")
+        div(class="price")
+          each value in ["price", "taxes", "ads", "discount"]
+            input(type="number", id=value, placeholder=value)
+          div(id="total" class="total") 0
+        input(type="number", id="count", placeholder="count")
+        input(type="text", id="category", placeholder="category")
+        button(id="submit") Create
+      //- outputes
+      div(class="outputes")
+        div(class="searchBlock")
+          input(type="text", id="search", placeholder="Search")
+          div(class="btnSearch")
+            each value in ["Title", "Category"]
+              button(id=`search${value}`) Search By #{value}
+        div(id="deleteAll")
+          button delete All
+        table 
+          thead 
+            tr 
+              each value in ["id", "title", "price", "taxes", "ads", "discount", "total", "category", "update", "delete"]
+                th= value 
+          tbody(id="mainBody") 
+
+    include includes/scripts.pug
